@@ -1,0 +1,58 @@
+lobby:
+  world: world
+  x: 0
+  y: 0
+  z: 0
+  # Optional
+  yaw: 0
+  pitch: 0
+
+areas: {}
+
+scoreboard:
+  enabled: true
+  title: "&6Bridging"
+  animated: false
+  content:
+    - "&bArea: %bedwars_bridging_area_name%"
+    - "&aBlocks: %bedwars_bridging_area_blocks%"
+    - "&9Time: %bedwars_bridging_area_time%s"
+    - ""
+    - "&eCoins: %bedwars_bridging_coins%"
+    - "&6Personal Best: %bedwars_bridging_personal_best%s"
+    - "&6Personal Best Rank: #%bedwars_bridging_personal_best_rank%"
+    - "&bAverage time: %bedwars_bridging_average_time%s"
+#  If animated = true
+#  contents:
+#    1:
+#      title: ""
+#      content:
+#        - "Line 1"
+#        - "Line 2"
+
+stats: {}
+
+default_block: id
+shop:
+  1:
+    id: legendary_dirt
+    mat: DIRT
+    coins: 3000
+    # Optional
+    disabled: true
+    default: false
+    data: 0
+    name: "&6Legendary Dirt"
+    lore:
+      - "&eThis is the legendary dirt"
+    permission: test.permission
+
+
+keep-inventory: true
+gamemode: survival
+teleport-back: false
+
+area_groups:
+  16b:
+    - 16-short-1____
+    - 16-short-2____

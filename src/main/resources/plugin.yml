@@ -1,0 +1,67 @@
+name: BedwarsPractice
+version: 1.0
+main: me.bramar.bedwarspractice.BedwarsPractice
+author: bramar
+depend:
+  - WorldEdit
+  - WorldGuard
+softdepend:
+  - PlaceholderAPI
+  - Citizens
+  - ProtocolLib
+description: Bedwars Practice Plugin
+commands:
+  bedwarsbridging:
+    description: Main command for bedwars bridging
+    usage: /<command>
+    aliases: bridging
+  bedwarsblockin:
+    description: Main command for bedwars blockin
+    usage: /<command>
+    aliases: blockin
+permissions:
+  bedwarspractice.*:
+    description: Full permission of plugin
+    children:
+      - bedwarspractice.user
+      - bedwarspractice.admin
+  bedwarspractice.user:
+    description: User permission of plugin. Recommended to be given to players.
+    children:
+      - bedwarspractice.bridging.user
+  bedwarspractice.admin:
+    description: Admin permission of plugin. Recommended to be given to ONLY server manager/admins.
+    children:
+      - bedwarspractice.bridging.admin
+  bedwarspractice.bridging.user:
+    description: User permission of Bridging (part of plugin)
+    children:
+      - bedwarspractice.bridging.play
+      - bedwarspractice.bridging.join
+      - bedwarspractice.bridging.leave
+      - bedwarspractice.bridging.reset
+      - bedwarspractice.bridging.stats
+  bedwarspractice.bridging.admin:
+    description: Admin permission of Bridging (part of plugin)
+    children:
+      - bedwarspractice.bridging.adminhelp
+      - bedwarspractice.bridging.kick
+      - bedwarspractice.bridging.forceplay
+      - bedwarspractice.bridging.forcejoin
+      - bedwarspractice.bridging.close
+      - bedwarspractice.bridging.open
+      - bedwarspractice.bridging.areas
+      - bedwarspractice.bridging.create
+      - bedwarspractice.bridging.delete
+      - bedwarspractice.bridging.setspawn
+      - bedwarspractice.bridging.setarea
+      - bedwarspractice.bridging.setfinish
+      - bedwarspractice.bridging.setlobby
+      - bedwarspractice.bridging.blocknpc
+      - bedwarspractice.bridging.stats
+      - bedwarspractice.bridging.clearstat
+      - bedwarspractice.bridging.clearstats
+      - bedwarspractice.bridging.getlb
+      - bedwarspractice.bridging.reload
+      - bedwarspractice.bridging.setstat
+      - bedwarspractice.bridging.stats.other
